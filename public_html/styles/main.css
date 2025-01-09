@@ -1,0 +1,3199 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'MontserratArm';
+    src: url(../fonts/Montserratarm-Regular.otf) format("opentype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url(../fonts/opensans.ttf) format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'MontserratArm';
+    src: url(../fonts/Montserratarm-Bold.otf) format("opentype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Tahoma';
+    src: url(../fonts/tahoma-regular-webfont.woff) format("opentype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Tahoma';
+    src: url(../fonts/tahoma-bold-webfont.woff) format("opentype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Nortar';
+    src: url(../fonts/Nortar-Regular.otf) format("opentype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Nortar';
+    src: url(../fonts/Nortar-Bold.otf) format("opentype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'DidotLTPro';
+    src: url(../fonts/37A37F_0_0.woff2) format("opentype");
+}
+
+@font-face {
+    font-family: 'ArianAmu';
+    src: url(../fonts/arnamu.ttf) format("opentype");
+}
+
+.display_none {
+    display: none !important;
+}
+
+/* Video */
+
+.video_wrapper {
+    position: relative;
+    display: flex;
+    width: 504px;
+    height: 909px;
+    justify-content: center;
+    align-items: center;
+}
+
+.video_wrapper iframe {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* Root */
+
+:root {
+    --h1-color: #C7003B;
+}
+
+/* Animations */
+
+.animate {
+    opacity: 1 !important;
+    transform: translateX(0) translateY(0) scale(1) !important;
+    --webkit-transform: translateX(0) translateY(0) scale(1) !important;
+}
+
+.animate_line {
+    clip-path: inset(0 0 0 0) !important;
+}
+
+.for_animate_left {
+    transform: translateX(-30%);
+    --webkit-transform: translateX(-30%);
+    transition: .7s ease;
+    opacity: 0;
+}
+
+.for_animate_right {
+    transform: translateX(30%);
+    --webkit-transform: translateX(30%);
+    transition: .7s ease;
+    opacity: 0;
+}
+
+/* General Styles */
+
+html {
+    scroll-behavior: smooth;
+    /* overflow-x: hidden!important; */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden !important;
+}
+
+* {
+    object-position: center center;
+    object-fit: contain;
+    font-family: 'ArianAmu';
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 100 !important;
+}
+
+section.section_standard {
+    width: 100%;
+    max-width: 1190px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+    margin: 150px auto 50px auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 60px;
+    margin: 15px 0px;
+    color: var(--h1-color);
+    margin: 0.8em 5px 0.8em 5px;
+    position: relative;
+}
+
+.img_standard {
+    width: 95%;
+    max-width: 500px;
+}
+
+.img_standard img {
+    width: 100%;
+    height: 100%;
+}
+
+.text_standard {
+    color: #000;
+    font-size: 20px;
+    padding: 0 20px;
+    margin: 20px 0;
+}
+
+/* Modal */
+
+.language_modal_container {
+    width: 100%;
+    height: 100vh;
+    background-color: #fbf1e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 999999;
+}
+
+.language_modal {
+    max-width: 330px;
+    width: 95%;
+    max-height: 375px;
+    height: 95%;
+    background-color: #ffff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px var(--h1-color);
+    border-radius: 30px;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+
+.language {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.language a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--h1-color);
+}
+
+.language a img {
+    margin-right: 15px
+}
+
+.languages_mobile {
+    font-size: 30px;
+    display: none;
+    justify-content: space-evenly;
+    position: relative;
+    bottom: 15px
+}
+
+.languages_mobile a {
+    text-decoration: none;
+    color: var(--h1-color);
+}
+
+/* Header */
+
+.header_mobile {
+    width: 100vw;
+    height: 60px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #b11630;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.header_mobile>* {
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header_mobile .wella_header_logo {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: 40px;
+    background-image: url("../images/logo_white.svg");
+}
+
+
+.header_mobile .burger_button {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    right: 40px;
+    background-image: url("../images/burger.png");
+    cursor: pointer;
+}
+
+header {
+    width: 100%;
+    max-width: 1190px;
+    margin: auto;
+}
+
+section.header_main {
+    width: 100%;
+    height: 152px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 30px 0;
+}
+
+section.header_main .social_media {
+    width: 109px;
+    height: 38px;
+    position: relative;
+}
+
+section.header_main .social_media a {
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+section.header_main .social_media a.instagram {
+    margin-left: 16px;
+}
+
+section.header_main .languages {
+    position: relative;
+}
+
+section.header_main .languages a {
+    width: 109px;
+    font-size: 24px;
+    text-decoration: none;
+    color: #444444;
+    transition: color .7s ease;
+}
+
+section.header_main .languages a:hover {
+    color: #000000;
+}
+
+section.header_main .languages a:nth-of-type(1) {
+    margin-right: 15px;
+}
+
+section.header_menu {
+    position: relative;
+    padding-bottom: 56px;
+    font-size: 18px;
+}
+
+section.header_menu .menu_inner {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.header_menu .menu_inner .menu_item {
+    position: relative;
+
+}
+
+section.header_menu .menu_inner .menu_item a {
+    color: #000;
+    text-align: justify;
+    text-decoration: none;
+    transition: .5s ease;
+
+}
+
+section.header_menu .menu_inner .menu_item.active a {
+    color: var(--h1-color);
+}
+
+section.header_menu .menu_inner .menu_item a:hover {
+    color: var(--h1-color);
+}
+
+section.header_menu .menu_inner .menu_item a::before {
+    position: absolute;
+    top: -4px;
+    height: 2px;
+    width: 100%;
+    background-color: var(--h1-color);
+    content: '';
+    display: block;
+    transition: .3s ease;
+    opacity: 0;
+}
+
+section.header_menu .menu_inner .menu_item.active a::before {
+    opacity: 1;
+}
+
+section.header_menu .menu_inner .menu_divider {
+    width: 4px;
+    height: 4px;
+    background-color: #C7003B;
+    margin: 0 9px;
+}
+
+
+/* Wella Banner */
+
+section.wella_banner {
+    width: 100%;
+    height: 822px;
+    max-width: 1190px;
+    margin: 0px auto 0px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.wella_banner_img {
+    width: 95%;
+    height: 100%;
+    position: relative;
+    margin: 0px 0 32px 0;
+}
+
+.wella_banner_img * {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+
+.wella_banner_content {
+    padding: 0% 70px
+}
+
+/* Catalog download */
+
+p.catalog {
+    width: 90%;
+    margin: 20px auto 25px auto;
+    text-align: center;
+    font-size: 24px;
+}
+
+p.catalog a {
+    text-decoration: none;
+    color: var(--h1-color);
+}
+
+/* Arge */
+
+section.arge {
+    width: 100%;
+    height: auto;
+    max-width: 1190px;
+    margin: 0px auto 50px auto
+}
+
+section.arge h1 {
+    text-align: center;
+    font-size: 75px;
+    margin: 15px 0px;
+    color: var(--h1-color);
+}
+
+section.arge .arge_text {
+    padding: 0px 62px;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+.pink {
+    /* font-family: "DidotLTPro"; */
+    color: var(--h1-color);
+}
+
+section.arge .arge_img {
+    margin: 0px 0 170px 0;
+}
+
+section.arge .arge_img img {
+    width: 100%;
+    height: auto;
+}
+
+/* Wellaton */
+
+
+.banner_text {
+    font-size: 29px;
+}
+
+section.wellaton_guide {
+    height: 1022px;
+    width: 100%;
+    max-width: 1190px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wellatton_guide_video {
+    width: 528px;
+    height: 100%;
+    background-color: rgba(199, 0, 59, 0.66);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.wellatton_guide_video .wellatton_video_block {
+    height: 939px;
+    width: 100%;
+    position: relative;
+    left: 78px;
+    background-position: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wellatton_guide_video .wellatton_video_block iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.wellatton_guide_video .wellatton_video_block video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.wellaton_guide_content {
+    width: 662px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: start;
+}
+
+.wellaton_guide_content .wellaton_guide_title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 205px;
+    margin-left: 15px;
+}
+
+.wellation_vertical_instructions {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 95px;
+    padding-right: 10px;
+    position: relative;
+    bottom: 80px;
+}
+
+.wellation_vertical_instructions .vertical_line {
+    height: 100%;
+    position: absolute;
+    width: 3px;
+    left: 100px;
+    background-color: #C7003B;
+    clip-path: inset(0 0 100% 0);
+    transition: 1.2s ease;
+}
+
+
+.wellation_vertical_instructions .guide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 33px 0;
+}
+
+.wellation_vertical_instructions .guide_dot {
+    width: 14px;
+    height: 14px;
+    background-color: #C7003B;
+    display: flex;
+    justify-content: center;
+}
+
+.wellation_vertical_instructions .guide_text {
+    margin-left: 20px;
+    font-size: 20px;
+    width: 92%;
+    text-align: justify;
+}
+
+/* Down Arrow */
+
+.down_arrow {
+    width: 40px;
+    height: 19px;
+    margin: 70px auto 60px auto;
+}
+
+/* Roadbook */
+
+.wella_roadbook {
+    width: 100%;
+    max-width: 1190px;
+    margin: auto;
+}
+
+
+.wella_roadbook h3 {
+    font-size: 34px;
+}
+
+.wella_roadbook .roadbook_container .selector_line {
+    height: 8px;
+    width: 100%;
+    position: relative;
+}
+
+.wella_roadbook .roadbook_container .selector_line .line_inner {
+    width: 50%;
+    height: 100%;
+    background: #C7003B;
+    box-shadow: 0px -3px 5px 0px rgba(199, 0, 59, 0.25);
+    clip-path: inset(0% 100% 0 0);
+    transition: 1.2s ease .3s;
+
+}
+
+
+
+.roadbook_choices {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.roadbook_choices .roadbook_choice {
+    width: 50%;
+    height: 555px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.roadbook_choices .roadbook_choice .choice_image {
+    width: 372px;
+    height: 372px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.roadbook_choices .roadbook_choice .choice_image img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.roadbook_choices .roadbook_choice .choice_text {
+    font-size: 37px;
+}
+
+.roadbook_options {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    /* height: 457px; */
+}
+
+.wellaton_option {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.wellaton_option .text {
+    width: 526px;
+    height: 313px;
+}
+
+.wellaton_option .text img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Middle Section Text */
+
+.middle_text {
+    width: 90%;
+    padding: 0px 15px;
+    max-width: 1190px;
+    text-align: justify;
+    font-size: 20px;
+    line-height: 28px;
+    margin: 97px auto 93px auto;
+}
+
+
+/* Brands */
+
+section.brands {
+    width: 100%;
+    max-width: 1190px;
+    margin: auto;
+    margin-bottom: 90px;
+    transform: translateY(5%);
+}
+
+
+
+/* Brands Slider Section */
+
+.brands_slider {
+    width: 100%;
+    height: 625px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto 65px auto;
+}
+
+
+.brands_slider .swiper-wrapper {
+    width: 100%;
+    height: 95%;
+}
+
+.brands_slider .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brands_slider .swiper-slide .slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.brands_slider .swiper-slide .slide * {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.brands_slider .swiper-slide .slide .slide_fon {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+}
+
+.brands_slider .swiper-slide .slide .wellaton_slide_fon {
+    background-image: url("../images/wellaton_slide_fon.png");
+}
+
+.brands_slider .swiper-slide .slide .londa_slide_fon {
+    background-image: url("../images/londa_slide_fon.png");
+}
+
+.brands_slider .swiper-slide .slide .deluxe_slide_fon {
+    background-image: url("../images/deluxe_slide_fon.png");
+}
+
+.brands_slider .swiper-slide .slide .wellaflex_slide_fon {
+    background-image: url("../images/wellaflex_slide_fon.png");
+}
+
+.brands_slider .swiper-slide .slide .color_perfect_slide_fon {
+    background-image: url("../images/color_perfect_slide_fon.png");
+}
+
+.brands_slider .swiper-slide .slide .slide_logo {
+    width: 35%;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    background-position: right top;
+
+}
+
+.brands_slider .swiper-slide .slide .wellaton_slide_logo {
+    background-image: url("../images/wellaton_slide_logo.png");
+    height: 59px;
+}
+
+.brands_slider .swiper-slide .slide .londa_slide_logo {
+    background-image: url("../images/londa_slide_logo.png");
+    height: 75px;
+}
+
+.brands_slider .swiper-slide .slide .deluxe_slide_logo {
+    background-image: url("../images/deluxe_slide_logo.png");
+    height: 60px;
+}
+
+.brands_slider .swiper-slide .slide .wellaflex_slide_logo {
+    background-image: url("../images/wellaflex_slide_logo.png");
+    height: 44px;
+}
+
+.brands_slider .swiper-slide .slide .color_perfect_slide_logo {
+    background-image: url("../images/color_perfect_slide_logo.png");
+    height: 59px;
+}
+
+.brands_slider .swiper-slide .slide .slide_obj {
+    width: 35%;
+    height: 461px;
+    position: relative;
+    bottom: 0%;
+    right: 1%;
+    align-self: end;
+    background-position: center;
+    background-position: bottom;
+    bottom: 0px;
+}
+
+
+
+.brands_slider .swiper-slide .slide .wellaton_slide_obj {
+    background-image: url("../images/wellaton_slide_obj.png");
+}
+
+.brands_slider .swiper-slide .slide .londa_slide_obj {
+    background-image: url("../images/londa_slide_obj.png");
+}
+
+.brands_slider .swiper-slide .slide .deluxe_slide_obj {
+    background-image: url("../images/deluxe_slide_obj.png");
+}
+
+.brands_slider .swiper-slide .slide .wellaflex_slide_obj {
+    background-image: url("../images/wellaflex_slide_obj.png");
+}
+
+.brands_slider .swiper-slide .slide .color_perfect_slide_obj {
+    background-image: url("../images/color_perfect_slide_obj.png");
+}
+
+.brands_slider .swiper-slide .slide .slide_text {
+    position: relative;
+    width: 50%;
+    height: auto;
+}
+
+.brands_slider .swiper-slide .slide .slide_text h1 {
+    margin: 15px 0;
+    font-size: 60px;
+    font-weight: 100;
+}
+
+.brands_slider .swiper-slide .slide .slide_text .slide_text_content {
+    font-size: 28px;
+}
+
+.brands_slider .londa_slide_text {
+    color: #ffff;
+}
+
+.brands_slider .swiper-slide {
+    color: #ffff;
+}
+
+
+/* History */
+
+section.history {
+    width: 100%;
+    max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.history_title {
+    margin-top: 180px;
+}
+
+.history_sub_title {
+    position: absolute;
+    top: 151px;
+    font-weight: bold;
+}
+
+
+/* History Slider */
+
+.history_slider {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto 110px auto;
+    flex-direction: column;
+}
+
+
+.history_slider .history_slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.history_slider .swiper-wrapper {
+    width: 100%;
+    height: 92%;
+}
+
+.history_slider .history_slide img {
+    width: 45%;
+    height: 650px;
+}
+
+.history_slider .history_text_container {
+    width: 45%;
+    height: 600px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    padding: 3% 0;
+}
+
+
+
+.history_slider .history_text_container .history_line {
+    width: 100%;
+    height: 2px;
+    font-size: 20px;
+    position: absolute;
+    color: #b11630;
+    z-index: -1;
+    top: 45%;
+}
+
+/* .history_slider .history_text_container span {
+    font-style: italic;
+} */
+
+.history_slider .history_text_container .history_line .history_num {
+    position: absolute;
+    top: 5px;
+}
+
+.history_slider .history_text_container .history_line::before {
+    content: "";
+    width: 1185px;
+    height: 2px;
+    background-color: #b11630;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
+
+.history_slider .history_text_container .history_line::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    border: solid;
+    border-width: 7px;
+    border-color: #b11630;
+    border-radius: 30px;
+}
+
+
+
+.history_slider .history_text_container h1 {
+    line-height: 48px;
+    font-size: 50px;
+    margin: 0;
+    position: relative;
+    font-weight: 100;
+}
+
+.history_slider .history_text_container p {
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.history_slider .history_num {
+    font-size: 20px;
+    color: #b11630;
+}
+
+.history_slide_5 .history_text_container h1 {
+    line-height: 38px;
+    font-size: 38px;
+}
+
+.history_slider .history_text_container .p_margin_initial {
+    margin: initial;
+}
+
+
+
+
+/* Brands Content */
+
+.brands_content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.brands_content>.h1_title::before {
+    display: none;
+}
+
+.brand_container {
+    margin: 50px 0px;
+}
+
+.brand_blocks_container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+}
+
+.wellaFlex_brand_blocks {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.wellaDeluxe_brand_blocks {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.wellaTon_brand_blocks {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.londaColor_brand_blocks {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.colorPerfect_brand_blocks {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.brand_block {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand_name {
+    text-align: center;
+    color: var(--h1-color);
+}
+
+.brand_image {
+    width: 100%;
+    height: 200px;
+    margin: 15px 0;
+}
+
+.brand_text {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.brand_text_bold {
+    font-weight: bold;
+}
+
+.brand_image img {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+}
+
+.brands_swiper_pagination {
+    bottom: 0px !important;
+}
+
+/* Wella Color Perfect 7 */
+
+section.wellaColorPerfect_guide {
+    width: 100%;
+    max-width: 1190px;
+    margin: auto auto 135px auto;
+    text-align: center;
+    transform: translateY(5%);
+}
+
+
+section.wellaColorPerfect_guide .wellaColorPerfect_main {
+    width: 100%;
+}
+
+section.wellaColorPerfect_guide .wellaColorPerfect_main>img {
+    width: min-content;
+    height: auto;
+    max-width: 100%;
+}
+
+.wellaColorPerfect_main_text_block {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 30px auto;
+    align-items: center;
+    font-size: 22px;
+    padding: 0 30px;
+}
+
+.wellaColorPerfect_main_text_block p {
+    margin: 5px 0px 10px 0;
+    border: 0;
+    border-style: solid;
+    border-color: var(--h1-color);
+}
+
+.wellaColorPerfect_midLine {
+    width: 3px;
+    height: 30px;
+    background-color: var(--h1-color);
+    margin: auto;
+}
+
+.wellaColorPerfect_main .wellaColorPerfect_main_text_block h2 {
+    background-color: #fcf0f4;
+    padding: 15px;
+}
+
+.wellaColorPerfect_main .wellaColorPerfect_main_text_block:nth-of-type(1) p {
+    border-bottom-width: 3px;
+}
+
+.wellaColorPerfect_main .wellaColorPerfect_main_text_block:nth-of-type(2) p {
+    margin: 20px auto;
+}
+
+.wellaColorPerfect_main .wellaColorPerfect_main_text_block:nth-of-type(2) p:nth-last-of-type(1) {
+    border-top-width: 3px;
+    padding-top: 10px;
+}
+
+.wellaColorPerfect_guide_steps {
+    width: 90%;
+    margin: auto;
+}
+
+.wellaColorPerfect_guide_step {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.wellaColorPerfect_guide_steps img {
+    width: 250px;
+}
+
+.wellaColorPerfect_guide_step_content {
+    width: calc(100% - 250px);
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.wellaColorPerfect_guide_step_content p {
+    margin: 10px;
+    font-size: 20px;
+}
+
+.wellaColorPerfect_guide_note {
+    font-size: 18px;
+    font-style: italic;
+    text-align: left;
+}
+
+.wellaColorPerfect_pre_title {
+    text-align: left;
+    margin-top: 30px;
+    background-color: #fcf0f4;
+    padding: 15px;
+    font-weight: bold !important;
+}
+
+.wellaColorPerfect_guide_step_9 img,
+.wellaColorPerfect_guide_step_10 img {
+    height: 150px;
+}
+
+/* Brand Video */
+
+.brand_video_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 15px;
+    margin-top: 100px;
+}
+
+.brand_video_container .brand_video_block {
+    width: 100%;
+    height: 330px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand_video_container .brand_video_block iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.brand_video_container .brand_video_block video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.brand_wellaFlex .brand_video_container .brand_video_block:nth-of-type(5) {
+    max-width: 530px;
+    width: 95%;
+    height: 938px;
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+
+
+
+/* Health Issues */
+
+.health_issues {
+    background: rgba(199, 0, 59, 0.08);
+    width: 100vw;
+    max-width: 100%;
+}
+
+.health_inner {
+    width: 100%;
+    max-width: 1190px;
+    margin: auto;
+}
+
+.health_inner h1 {
+    width: 90%;
+    color: #444;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 47.184px;
+    text-align: justify;
+    margin: auto;
+    padding: 64px 0;
+}
+
+.health_issue_list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 124px;
+}
+
+.health_issue_list .white {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 85%;
+    background-color: #fff;
+}
+
+.issue {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 416px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.issue .icon {
+    width: 230px;
+    height: 230px;
+    position: relative;
+    z-index: 2;
+    transform-origin: center bottom;
+    transform: scale(.7);
+    transition: 1.2s ease;
+}
+
+.issue .icon img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.issue .text {
+    z-index: 2;
+    font-size: 20px;
+    color: #444;
+    margin: auto 14px;
+}
+
+/* Manual */
+
+section.manual {
+    width: 100%;
+    max-width: 1190px;
+    margin: auto;
+}
+
+
+section.manual .divider {
+    width: 95%;
+    max-width: 371px;
+    margin: auto;
+    height: 2px;
+    background-color: #C7003B;
+}
+
+section.manual p {
+    text-align: center;
+    font-size: 24px;
+    line-height: 38px;
+    margin-inline-start: 1em;
+    margin-inline-end: 1em;
+}
+
+section.manual .placeholder {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+
+section.manual .manual_sections {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.manual_sections .manual_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+.manual_section .text {
+    width: 535px;
+}
+
+.manual_section .manual_texts .image {
+    margin: auto;
+    max-width: 317px;
+    width: 100%;
+    clip-path: inset(0% 45% 0% 45%);
+    transition: 1s ease;
+}
+
+.manual_section .manual_texts .placeholder img {
+    margin: auto;
+    max-width: 317px;
+    width: 100%;
+}
+
+.manual_section .manual_texts .text {
+    text-align: center;
+    color: #444;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 13px 0 28px 0;
+}
+
+/* First Time Guide */
+
+.first_time_guide {
+    width: 100%;
+    max-width: 1190px;
+    margin: auto;
+}
+
+.first_time_guide h3 {
+    color: #444;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: bolder;
+    line-height: 28px;
+    margin-top: 2em;
+}
+
+.first_time_guide .step {
+    display: flex;
+    margin-top: 80px;
+}
+
+.first_time_guide .first_time_steps {
+    display: flex;
+    flex-direction: column;
+}
+
+.step .image {
+    width: 218px;
+}
+
+.step .content {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.step .content .step_ident {
+    width: 100%;
+    background-color: #C7003B;
+    color: #fff;
+    padding: 18px 0px 18px 16px;
+    font-size: 20px;
+    font-weight: bold;
+    clip-path: inset(0% 80% 0 0);
+    transition: 1.2s ease;
+}
+
+
+
+.step .content .step_description {
+    text-align: justify;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    margin-top: 20px;
+}
+
+/* Caution */
+
+.caution {
+    width: 100%;
+    max-width: 1190px;
+    margin: auto;
+    padding: 0 1em;
+    box-sizing: border-box;
+}
+
+.caution h1 {
+    color: #444;
+    text-align: justify;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: center;
+}
+
+.caution-condition {
+    position: relative;
+    padding: 0 2em;
+    color: #000;
+    text-align: justify;
+    font-size: 20px;
+    font-style: normal;
+    line-height: 32px;
+    margin-bottom: 33px;
+}
+
+.caution-condition::before {
+    content: '';
+    position: absolute;
+    height: 80%;
+    width: 5px;
+    top: 10%;
+    left: 0;
+    background-color: #C7003B;
+    border-radius: 1px;
+}
+
+.caution-info {
+    font-size: 20px;
+}
+
+/* FAQ */
+
+.faq {
+    background-image: url("../images/questions.jpg");
+    background-color: rgb(243 235 240);
+    background-position: bottom right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 15px 0;
+    margin-top: 32px;
+
+}
+
+.faq_inner {
+    width: 100%;
+    max-width: 1190px;
+    margin: auto;
+}
+
+.faq_inner .notice {
+    font-size: 30px;
+    text-align: center;
+}
+
+.faq_inner .question {
+    display: flex;
+    justify-content: space-between;
+    margin: 32px 0;
+}
+
+.faq_inner .question .image {
+    display: inline-block;
+    width: 24px;
+    height: 15px;
+    margin-top: 7px;
+    background-image: url("../images/wella_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.faq_inner .question .text {
+    display: inline-block;
+    width: calc(100% - 40px);
+    font-size: 20px;
+}
+
+/* Test Guide */
+
+section.test {
+    width: 100%;
+    max-width: 1190px;
+    margin: 0 auto 80px auto;
+}
+
+section.test h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 51px;
+    padding: 0 1em;
+}
+
+section.test .test_inner {
+    display: flex;
+}
+
+.test_inner .test_steps {
+    width: 45%;
+}
+
+.test_inner .test_step h4 {
+    color: var(--h1-color);
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 51px;
+}
+
+.test_inner .test_step div {
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.test_inner .test_picture {
+    margin-left: 5%;
+    position: relative;
+    /* width: 600px; */
+    width: 41%;
+}
+
+.test_inner .test_picture img {
+    position: absolute;
+    /* width: 527px; */
+    width: 90%;
+    height: 733px;
+    left: -40px;
+    bottom: 0;
+}
+
+.test_inner .test_picture .test_color {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    /* width: 527px; */
+    width: 100%;
+    height: 670px;
+    background-color: #FAD0DC;
+}
+
+
+/* Contacts */
+
+section.contacts {
+    width: 100%;
+    max-width: 1290px;
+    margin: 10px auto 100px auto;
+}
+
+
+
+#footer .contacts_contanier {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#footer .contacts_contanier .contact_block {
+    max-width: 550px;
+    background: rgba(199, 0, 59, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+}
+
+#footer .contacts_contanier .contact_block h3 {
+    display: flex;
+    margin: 0;
+    height: 30px;
+    margin-bottom: 5px
+}
+
+#footer .contacts_contanier .contact_block h3 a {
+    width: 30px;
+    margin-right: 15px;
+}
+
+#footer .contacts_contanier .contact_block h3 span {
+    font-weight: 500;
+
+}
+
+#footer .contacts_contanier .contact_block img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+
+.contact_block_social h3 span {
+    margin-right: 10px
+}
+
+.contact_block_social img,
+.contact_block_mail img,
+.contact_block_phone img {
+    position: relative;
+    bottom: 5px;
+}
+
+
+
+/* About us */
+
+
+
+.h1_title::before {
+    content: "";
+    top: -115px;
+    left: 50%;
+    width: 2px;
+    height: 90px;
+    position: absolute;
+    background: #c8003c;
+}
+
+
+section.about_us {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    margin: auto 0 80px 0;
+}
+
+.about_us_block {
+    width: 100%;
+    max-width: 1190px;
+    position: relative;
+    margin: 0 auto;
+}
+
+
+section.about_us .hairdressing_block {
+    display: flex;
+    align-items: center;
+    margin-top: 70px
+}
+
+
+section.about_us .hairdressing_block img {
+    width: 100%;
+}
+
+section.about_us .hairdressing_block .hairdressing_text {
+    width: 600px;
+    position: absolute;
+    right: -140px;
+    padding: 30px 100px;
+    color: white;
+    background: linear-gradient(to right,
+            rgba(227, 30, 60, .01) 0%,
+            rgba(227, 30, 60, .05) 10%,
+            rgba(227, 30, 60, .16) 22%,
+            rgba(227, 30, 60, .28) 31%,
+            rgba(227, 30, 60, .57) 47%,
+            rgba(227, 30, 60, .89) 73%,
+            #c8003c 87%,
+            #c8003c 100%);
+}
+
+section.history .hairdressing_block .hairdressing_text h5 {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+section.history .hairdressing_block .hairdressing_text h2 {
+    font-size: 48px;
+    margin: 0;
+}
+
+section.history .hairdressing_block .hairdressing_text p {
+    font-weight: 300;
+    line-height: 150%;
+}
+
+
+section.history .hairdressing_block .hairdressing_text h5::before {
+    content: "";
+    left: 280px;
+    width: 90px;
+    height: 2px;
+    position: absolute;
+    background: #fff;
+}
+
+section.values {
+    width: 100%;
+    max-width: 1190px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+section.values h1.values_title::before {
+    content: "";
+    top: -115px;
+    left: 50%;
+    width: 2px;
+    height: 90px;
+    position: absolute;
+    background: #c8003c;
+}
+
+section.values .values_sub_title {
+    margin: 0%;
+    position: relative;
+    bottom: 25px;
+    width: 50%;
+    text-align: center;
+}
+
+
+.values_block_container {
+    width: 100%;
+    justify-items: center;
+    position: relative;
+    background: #C7003B;
+}
+
+.value_block {
+    width: 100%;
+    height: 411px;
+    position: relative;
+}
+
+.value_block img {
+    width: 100%;
+    background-size: cover;
+}
+
+.value_block_text_container {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    bottom: 0;
+    padding-bottom: 15px;
+    background: linear-gradient(to bottom,
+            rgba(227, 30, 60, .01) 0%,
+            rgba(227, 30, 60, .05) 4%,
+            rgba(227, 30, 60, .16) 10%,
+            rgba(227, 30, 60, .28) 19%,
+            rgba(227, 30, 60, .57) 33%,
+            rgba(227, 30, 60, .89) 57%,
+            #c8003c 73%,
+            #c8003c 100%)
+}
+
+.value_block_text {
+    width: 25%;
+    position: relative;
+    bottom: 0%;
+    color: white;
+    box-sizing: border-box;
+}
+
+.value_block .value_block_text h2 {
+    font-size: 34px;
+    margin: 10px 0;
+    font-style: italic;
+}
+
+.value_block .value_block_text p {
+    font-size: 19px;
+    margin: 5px 0;
+}
+
+.believe_blocks_container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.believe_block {
+    display: flex;
+    justify-content: center;
+}
+
+.believe_first img {
+    width: 45%;
+    max-width: 450px;
+    height: 450px;
+}
+
+.believe_text_container {
+    position: relative;
+    max-width: 555px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.believe_text_container h2 {
+    font-size: 45px;
+    line-height: 48px;
+    position: relative;
+
+}
+
+.believe_text_container p {
+    width: 85%;
+    position: relative;
+}
+
+.believe_first .believe_text_container {
+    margin-bottom: 150px;
+}
+
+.believe_text_container p {
+    font-size: 20px;
+    position: relative;
+
+}
+
+.believe_first h2 {
+    right: 30px;
+}
+
+.believe_first p {
+    left: 60px;
+    position: relative;
+}
+
+.believe_second img {
+    height: 778px;
+}
+
+.believe_second h2 {
+    font-size: 51px;
+}
+
+.believe_second p {
+    left: 30px;
+    font-size: 18px;
+}
+
+.believe_third {
+    margin: 100px 0;
+}
+
+.believe_third img {
+    height: 700px;
+}
+
+.believe_third h2 {
+    right: 80px;
+}
+
+.believe_third p {
+    left: 50px;
+}
+
+
+
+
+/* Footer */
+
+footer {
+    position: relative;
+    background-color: #C7003B;
+    color: #fff;
+    width: 100%;
+    padding: 30px 0 30px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    color: #FFF;
+    text-align: justify;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.footer_wrapper {
+    width: 100%;
+    max-width: 1190px;
+    margin: auto;
+}
+
+.footer_top_line {
+    background-image: url("../images/wella_footer_line.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 104px;
+    position: relative;
+    top: -20px;
+    pointer-events: none;
+    touch-action: none;
+}
+
+.footer_inner {
+    display: flex;
+    justify-content: space-evenly;
+    height: 65px;
+}
+
+.options_left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    align-self: flex-end;
+    margin-bottom: 20px;
+}
+
+.options_left a {
+    margin-bottom: .7em;
+}
+
+
+.options_middle {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.options_middle .options_middle_text {
+    margin-bottom: 10px;
+}
+
+.options_middle .options_middle_socials img {
+    width: 32px;
+    height: 32px;
+}
+
+.options_right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    align-self: flex-end;
+    margin-bottom: 20px;
+}
+
+.options_right a {
+    margin-bottom: .7em;
+}
+
+
+.footer_bottom_line {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+
+footer .credit {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Loader */
+
+/* .loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 100;
+    transition: opacity .5s ease;
+    opacity: 1;
+}
+
+body.loaded .loader {
+    opacity: 0;
+    pointer-events: none;
+} */
+
+.spinner {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spinner:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #C7003B;
+    border-color: #C7003B transparent #C7003B transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation Scroll */
+
+section {
+    transform: translateY(0%);
+    transition: .5s ease;
+}
+
+section.header_main {
+    transform: translateY(0%);
+}
+
+
+/* Up Button */
+
+.upBtn {
+    width: 60px;
+    height: 60px;
+    border-radius: 40px;
+    border: solid;
+    border-width: 1px;
+    border-color: #C7003B;
+    position: fixed;
+    transform: translateY(100px);
+    background-color: #ffffff;
+    background-image: url("../images/upBtn.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+    right: 15px;
+    bottom: 15px;
+    opacity: .7;
+    transition: .3s ease;
+    z-index: 555;
+}
+
+.upBtn:hover {
+    opacity: 1;
+}
+
+.upBtn a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/* Response */
+
+@media (max-width: 1481px) {
+    section.about_us .hairdressing_block .hairdressing_text {
+        right: -30px;
+    }
+}
+
+
+@media (max-width: 1281px) {
+
+    /* Header */
+
+    section.header_main .languages {
+        right: 15px;
+    }
+
+    section.header_main .social_media {
+        left: 15px;
+    }
+
+    /* Wellaton Guide  */
+
+    section.wellaton_guide {
+        height: auto;
+    }
+
+    .wellatton_guide_video .wellatton_video_block {
+        top: 50px;
+        height: 1042px;
+    }
+
+
+    /* Manual Section */
+
+    .m_s1 {
+        flex-direction: column;
+    }
+
+    .m_s2 {
+        flex-direction: column-reverse;
+    }
+
+    .m_s3 {
+        flex-direction: column;
+    }
+
+    .manual_texts {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .manual_texts .text {
+        width: 60%;
+    }
+
+    section.manual .placeholder img {
+        width: 100%;
+    }
+
+    /* Health Issues */
+
+    .health_issue_list {
+        justify-content: space-evenly;
+    }
+
+    /* First Time Guide */
+
+    .first_time_guide h3 {
+        text-align: center;
+    }
+
+    .step .content .step_ident {
+        padding: 18px 10px 18px 10px;
+    }
+
+    .first_time_guide .step {
+        width: 90%;
+    }
+
+    .first_time_steps {
+        align-items: center;
+    }
+
+    /* Faq */
+
+    .faq {
+        padding: 15px 1em;
+    }
+
+    /* Wella Roadbook */
+
+    .wella_roadbook {
+        width: 90%;
+    }
+
+    .wella_roadbook h3 {
+        margin-left: 0.5em;
+    }
+
+    .wella_roadbook .roadbook_container .selector_line {
+        width: 90%;
+        margin-left: 1.5em;
+    }
+
+    .wella_roadbook .roadbook_container .selector_line .line_inner {
+        width: 60%;
+    }
+
+    /* Test */
+
+    .test_step {
+        padding-left: 15px;
+    }
+
+    .test_inner .test_picture {
+        overflow: hidden;
+    }
+
+    .test_inner .test_picture .test_color {
+        height: 615px;
+        top: 150px;
+        left: -15px;
+    }
+
+
+    /* Slider */
+
+    .brands_slider .swiper-slide .slide .slide_text .slide_text_content {
+        font-size: 1.5em;
+    }
+
+
+    section.contacts .contacts_contanier .contact_block {
+        width: 80%;
+        margin: 20px 0;
+        align-items: center;
+    }
+
+    /* About us */
+
+    section.about_us .hairdressing_block {
+        margin-bottom: 150px;
+    }
+
+    section.about_us .hairdressing_block .hairdressing_text {
+        width: 400px;
+        right: 30px;
+        top: 260px;
+        padding: 20px;
+        background: #C7003B;
+    }
+
+    section.about_us .hairdressing_block .hairdressing_text h2 {
+        font-size: 34px;
+    }
+
+    section.about_us .hairdressing_block .hairdressing_text h5::before {
+        left: 180px;
+    }
+
+
+
+    .history_sub_title {
+        top: 151px;
+
+    }
+
+
+    .believe_block img {
+        width: 100%;
+    }
+
+    .believe_text_container {
+        align-items: center;
+        padding: 0px 15px;
+    }
+
+
+    .believe_text_container * {
+        width: 100%;
+    }
+
+    .believe_text_container br {
+        display: none;
+    }
+
+    .believe_text_container h2 {
+        font-size: 35px;
+        line-height: 36px;
+    }
+
+    .believe_first,
+    .believe_third {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .believe_first h2,
+    .believe_third h2 {
+        right: initial;
+    }
+
+
+    .believe_first p,
+    .believe_second p,
+    .believe_third p {
+        left: initial;
+    }
+
+    .believe_second {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    /* History Slider */
+
+    .history_slider .history_slide img {
+        height: 550px;
+    }
+
+    .history_slider .history_text_container h1 {
+        line-height: 33px;
+        font-size: 34px;
+        top: 50px;
+    }
+
+    .history_slider .history_slide_5 .history_text_container h1 {
+        top: initial;
+    }
+
+    .history_slider .history_text_container .history_line::before {
+        width: 221%;
+    }
+
+    /* WellaDeluxe Video */
+
+
+
+
+    .brand_video_container .brand_video_block {
+        width: 80%;
+        height: 269px;
+    }
+
+}
+
+
+@media (max-width: 1081px) {
+
+    /* Global */
+
+    .title {
+        font-size: 49px;
+    }
+
+    .am_title {
+        font-size: 27px !important;
+    }
+
+    /* Brands */
+
+    .wellaFlex_brand_blocks {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Brands Slider */
+
+    .brands_slider {
+        width: 90%;
+    }
+
+    .brands_slider img {
+        background-position: center;
+    }
+
+    /* Wella Roadbook */
+
+    .wellaton_option {
+        flex-direction: column-reverse;
+    }
+
+    .wellaton_option .image {
+        margin-bottom: 50px;
+    }
+
+    .wellaton_option .image {
+        text-align: center;
+    }
+
+    /* Test */
+
+    section.test .test_inner {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+
+    .test_inner .test_steps {
+        width: 90%;
+        margin-bottom: 40px;
+    }
+
+    .test_inner .test_picture .test_color {
+        position: relative;
+        width: 75%;
+        top: 50px;
+        left: 75px;
+    }
+
+    .test_inner .test_picture img {
+        height: 100%;
+        bottom: -25px;
+    }
+
+
+    .test_inner .test_picture {
+        overflow: initial;
+        width: 615px;
+        height: 615px;
+    }
+
+    /* About us */
+
+
+    section.about_us .hairdressing_block {
+        margin-bottom: 340px;
+    }
+
+    section.about_us .hairdressing_block .hairdressing_text {
+        top: 300px;
+        padding: 15px;
+    }
+
+    /* Values */
+
+    section.values .values_sub_title {
+        width: 85%;
+    }
+
+    .value_block_text_container .value_block_text:nth-child(1) {
+        align-self: flex-start;
+        text-align: left;
+        margin: 15px 0px 15px 15px;
+    }
+
+    .value_block_text_container .value_block_text:nth-child(2) {
+        align-self: center;
+        text-align: center;
+    }
+
+    .value_block_text_container .value_block_text:nth-child(3) {
+        align-self: flex-end;
+        text-align: right;
+        margin: 15px 15px 15px 0px;
+    }
+
+    .value_block {
+        height: initial;
+    }
+
+    .value_block_text {
+        width: 90%;
+
+    }
+
+    .value_block_text_container {
+        position: relative;
+        flex-direction: column;
+        background: #C7003B;
+        padding: 0;
+    }
+
+}
+
+@media (max-width: 881px) {
+
+    /* Wella Banner */
+
+    section.wella_banner {
+        height: 471px;
+    }
+
+    /* Wellaton Guide */
+
+    section.wellaton_guide {
+        flex-direction: column;
+    }
+
+    .wellatton_guide_video {
+        width: 70%;
+        right: 6%;
+        margin-bottom: 100px;
+    }
+
+    .wellaton_guide_content {
+        align-items: center;
+    }
+
+    .wellaton_guide_content .wellaton_guide_title {
+        margin-bottom: 30px;
+        margin-left: 0px;
+    }
+
+    .wellaton_guide_content {
+        width: 90%;
+    }
+
+    .wellation_vertical_instructions {
+        padding-left: 0px;
+        bottom: initial;
+    }
+
+    .wellation_vertical_instructions .vertical_line {
+        left: 5px;
+    }
+
+    .wellation_vertical_instructions .guide_text {
+        text-align: left;
+    }
+
+    /* Wella Roadbook */
+
+    .wella_roadbook h3 {
+        font-size: 27px;
+    }
+
+    .roadbook_choices {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    .roadbook_choices .roadbook_choice {
+        width: 90%;
+        height: 400px;
+    }
+
+    .roadbook_choices .roadbook_choice .choice_image {
+        width: 272px;
+        height: 272px;
+    }
+
+    .wellaton_option .text {
+        width: 70%;
+        height: 100%;
+    }
+
+    .wellaton_option .image {
+        width: 95%;
+        height: 100%;
+    }
+
+    .wellaton_option .image img {
+        width: 65%;
+    }
+
+    /* Health Issues */
+
+    .health_issue_list {
+        flex-direction: column-reverse;
+    }
+
+    .health_issue_list .issue {
+        width: 50%;
+    }
+
+
+    /* Brands */
+
+
+    .wellaDeluxe_brand_blocks {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .wellaTon_brand_blocks {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .londaColor_brand_blocks {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .colorPerfect_brand_blocks {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .brand_text {
+        font-size: 19px;
+    }
+
+
+    /* WellaDeluxe Video */
+
+    .brand_video_container .brand_video_block {
+        width: 95%;
+        height: 223px;
+    }
+
+
+
+
+    .value_block .value_block_text h2 {
+        font-size: 27px;
+    }
+
+    .value_block .value_block_text p {
+        font-size: 16px;
+    }
+
+    /* Brands Slider */
+
+    .brands_slider .swiper-slide .slide .slide_text .slide_text_content {
+        font-size: 1em;
+    }
+
+    /* History Slider */
+
+
+    .history_swiper .swiper-wrapper {
+        margin-bottom: 15%;
+    }
+
+    .history_slider {
+        height: auto;
+    }
+
+    .history_slide {
+        flex-direction: column-reverse;
+    }
+
+    .history_slider .history_slide img {
+        width: 90%;
+
+    }
+
+    .history_slider .history_text_container {
+        width: 90%;
+        height: auto;
+        justify-content: space-around;
+    }
+
+
+    .history_slider .history_text_container h1 {
+        margin: 0 0 100px 0px;
+        font-size: 25px;
+        top: initial;
+    }
+
+    .history_slider .history_text_container .history_line {
+        top: 105px;
+    }
+
+
+
+    .history_slider .history_text_container h1 {
+        line-height: 26px;
+    }
+
+
+
+}
+
+@media (max-width: 681px) {
+    /* footer */
+    /*
+    section>.title {
+        padding-top: 60px;
+    } */
+
+    section.header_main {
+        padding-top: 90px;
+    }
+
+    .footer_inner {
+        height: 100px;
+    }
+
+    .contacts_contanier {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .contact_block {
+        margin: 10px 0;
+    }
+
+
+
+    /* Body */
+
+    /* body {
+        padding-top: 60px;
+    } */
+
+    /* Header */
+
+    .header_menu {
+        position: fixed;
+        width: 100vw;
+        display: block;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-color: white;
+        z-index: 1000;
+        left: 0px;
+        top: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .languages_mobile {
+        display: flex;
+    }
+
+    section.header_menu .menu_inner .menu_item {
+        font-size: 32px;
+        margin: 15px 0;
+    }
+
+    section.header_menu {
+        position: fixed;
+        padding: 0;
+        transform: translateY(0) translateX(-100%);
+    }
+
+    .open {
+        transform: translateY(0) translateX(0%) !important;
+    }
+
+
+    section.header_menu .menu_inner {
+        margin: initial;
+        flex-direction: column;
+    }
+
+    .header_mobile {
+        display: flex;
+    }
+
+    section.header_main {
+        justify-content: center;
+    }
+
+    section.header_main .logo {
+        position: relative;
+        /*bottom: 30px;*/
+    }
+
+    section.header_main .social_media,
+    section.header_main .languages {
+        position: absolute;
+        bottom: 10px;
+    }
+
+    .health_inner h1 {
+        text-align: center;
+    }
+
+
+    /* Manual Section */
+
+    .manual_section .manual_texts .text {
+        width: 90%;
+    }
+
+    /* Wella Roadbook */
+
+    .wellaton_option .text {
+        width: 90%;
+        height: 100%;
+    }
+
+    .wellaton_option .image img {
+        width: 85%;
+    }
+
+    /* Test */
+
+    .test_inner .test_picture {
+        width: 95%;
+    }
+
+
+    /* First Time Guide */
+
+    .first_time_guide {
+        margin-bottom: 80px;
+    }
+
+    .first_time_guide .step {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .step .content {
+        width: 90%;
+        padding-left: initial;
+    }
+
+    .step .content .step_description {
+        margin-bottom: 30px;
+    }
+
+    .step .content .step_ident {
+        padding: 18px 0px 18px 10px;
+    }
+
+    /* Brands */
+
+    .wellaDeluxe_brand_blocks {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .wellaFlex_brand_blocks {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* About us */
+
+    section.about_us .hairdressing_block .hairdressing_text {
+        top: 235px;
+    }
+
+    section.about_us .hairdressing_block {
+        margin-bottom: 455px;
+    }
+
+    /* History Slider */
+
+    .history_slider .history_slide_5 .history_text_container h1 {
+        font-size: 20px;
+        line-height: 21px;
+    }
+
+
+    .history_slider .history_text_container .history_line::before {
+        width: 110%;
+    }
+
+    /* WellaDeluxe Video */
+
+    .brand_video_container .brand_video_block {
+        width: 95%;
+        height: 170px;
+    }
+
+}
+
+
+
+@media (max-width: 551px) {
+
+
+    /* Global */
+
+    .title {
+        font-size: 45px;
+    }
+
+    /* Wella Banner */
+
+    section.wella_banner {
+        height: 361px;
+    }
+
+
+    /* ARGE */
+
+    section.arge .arge_text {
+        padding: 0px 15px;
+    }
+
+    /* Wella Guide */
+
+    .wellatton_guide_video {
+        width: 80%;
+    }
+
+    .wellatton_guide_video .wellatton_video_block {
+        height: 719px;
+        background-position: 54%;
+        background-size: 380px;
+        background-repeat: no-repeat;
+        left: 35px;
+        top: initial;
+    }
+
+    .wellatton_guide_video .wellatton_video_block iframe {
+        width: 97%;
+        height: 90%;
+    }
+
+    /* Health Issues */
+
+    .health_issue_list .issue {
+        width: 80%;
+    }
+
+    /* Brands */
+
+    section.brands .brand_name {
+        font-size: 45px;
+    }
+
+    /* Brands Slider */
+
+    .brands_slider .slide {
+        flex-direction: column;
+    }
+
+    .brands_slider .swiper-slide .slide .slide_text .slide_text_content {
+        font-size: 1.2em;
+    }
+
+    .brands_slider .swiper-slide .slide .slide_text h1 {
+        font-size: 50px;
+    }
+
+    .brands_slider .swiper-slide .slide .slide_text {
+        width: 95%;
+    }
+
+    .brands_slider .swiper-slide .slide .slide_obj {
+        width: 90%;
+        height: 35%;
+        align-self: center;
+    }
+
+    /* wellaColorPerfect_guide */
+
+    .wellaColorPerfect_guide .wellaColorPerfect_guide_steps .wellaColorPerfect_guide_step {
+        flex-direction: column;
+    }
+
+    .wellaColorPerfect_guide .wellaColorPerfect_guide_steps .wellaColorPerfect_guide_step .wellaColorPerfect_guide_step_content {
+        padding: 0;
+        width: 100%;
+    }
+
+    /* About us */
+
+    section.about_us .hairdressing_block {
+        justify-content: center;
+    }
+
+    section.about_us .hairdressing_block .hairdressing_text {
+        width: 90%;
+        right: initial;
+    }
+
+    .h1_title {
+        margin: 50px 0;
+    }
+
+    section.values .values_sub_title {
+        width: 80%;
+    }
+
+    .believe_block img {
+        height: 550px;
+    }
+
+    .believe_text_container h2 {
+        font-size: 23px;
+        line-height: 27px;
+    }
+
+    section.about_us .values_block_container .value_block {
+        width: 100%;
+    }
+
+
+    section.about_us .values_block_container .value_block {
+        padding-left: 5px;
+    }
+
+    /* About us History */
+
+    section.history {
+        margin-top: 150px;
+    }
+
+    .history_sub_title {
+        top: 18px;
+    }
+
+    /* Contacts */
+
+    section.contacts .contacts_contanier .contact_block h3 {
+        margin: 20px 0;
+    }
+
+
+    /* WellaDeluxe Video */
+
+    .brand_video_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .brand_video_container .brand_video_block {
+        height: 265px;
+    }
+
+    .brand_wellaFlex .brand_video_container .brand_video_block:nth-of-type(5) {
+        height: 680px;
+        grid-column: initial;
+        grid-row: initial;
+    }
+
+    /* test */
+
+    .test_inner .test_picture img {
+        left: 0;
+    }
+
+}
+
+@media (max-width: 431px) {
+
+    /* Global */
+
+    .title {
+        font-size: 36px;
+    }
+
+    .am_title {
+        font-size: 24px !important;
+    }
+
+    /* Wella Banner  */
+
+    section.wella_banner {
+        height: 294px;
+    }
+
+    /* History */
+
+    .history_slider .history_text_container h1 {
+        line-height: 22px;
+        font-size: 21px;
+    }
+
+    /* Brand */
+
+    .brand_video_container .brand_video_block {
+        height: 220px;
+    }
+
+    .brand_wellaFlex .brand_video_container .brand_video_block:nth-of-type(5) {
+        width: 89%;
+    }
+
+    /* First time Guide */
+
+    .first_time_guide h3 {
+        font-size: 26px;
+    }
+
+    /* Caution */
+
+    .caution h1 {
+        font-size: 26px;
+
+    }
+
+}
+
+@media (max-width: 391px) {
+
+    /* Wella Guide */
+
+    .wellatton_guide_video {
+        right: 12%;
+    }
+
+
+    /* Manual Section */
+
+    .manual_section .manual_texts .image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .manual_section .manual_texts .image img {
+        width: 80%;
+    }
+
+
+    /* Test */
+
+    .test_inner .test_picture .test_color {
+        width: 79%;
+        top: 197px;
+        left: 47px;
+        height: 60%;
+    }
+
+    /* Brands Slider */
+
+    .brands_slider .swiper-slide .slide .slide_text h1 {
+        font-size: 40px;
+    }
+
+
+    /* About_us */
+
+    section.about_us .hairdressing_block .hairdressing_text h2 {
+        font-size: 29px;
+    }
+
+    section.about_us .hairdressing_block .hairdressing_text {
+        top: 170px;
+    }
+
+
+
+}
+
+@media (max-width: 351px) {
+
+    /* Global */
+
+    .title {
+        font-size: 28px;
+    }
+
+    .am_title {
+        font-size: 19px !important;
+    }
+
+
+    /* body */
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Wella banner */
+
+    section.wella_banner {
+        height: 231px;
+    }
+
+
+    /* Footer */
+
+    .options_middle_text {
+        text-align: center;
+    }
+
+    .footer_inner * {
+        font-size: 14px;
+    }
+
+    /* About us */
+
+    section.about_us .hairdressing_block .hairdressing_text h2 {
+        font-size: 24px;
+    }
+
+
+    /* Contacts */
+
+
+    section.contacts .contacts_contanier .contact_block h3 span {
+        font-size: 21px;
+    }
+
+}
